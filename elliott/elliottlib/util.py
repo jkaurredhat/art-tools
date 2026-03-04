@@ -592,7 +592,7 @@ def golang_builder_version(nvr, logger):
     go_version = None
     try:
         build_log = brew.get_nvr_arch_log(*nvr)
-     except BrewBuildException as e:
+    except BrewBuildException as e:
         logger.error(f'Could not find Go version in build log for {nvr}: {e}', exc_info=True)
     else:
         try:
